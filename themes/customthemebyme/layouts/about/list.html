@@ -1,0 +1,97 @@
+{{ define "main" }}
+
+        <div class="site-section" style="padding-top: 160px">
+            <div class="container">
+
+                <div class="row mb-5 ">
+                    <div class="col-md-7">
+                        <h2 class="serif">About</h2>
+                    </div>
+                </div>
+
+                <div class="row align-items-center" style="flex-direction: row-reverse;">
+                    <div class="col-md-6 mb-5 mb-md-0">
+                        <img src="/img/DCS_0639.JPG" alt="Me" class="img-fluid">
+
+                    </div>
+                    <div class="col-md-5 ml-auto">
+                        <h2>About Eric</h2>
+                        <p>
+                            This is the about me page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. A erat nam at lectus urna duis. Sed velit dignissim sodales ut eu sem. Lectus urna duis convallis convallis tellus. Diam sit amet nisl suscipit adipiscing bibendum est. Sed felis eget velit aliquet sagittis id consectetur. Vulputate dignissim suspendisse in est ante in nibh mauris cursus. Morbi quis commodo odio aenean. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
+                        </p>
+                        <div class="social_29128 mt-5" style="">
+                            <a style="background-color:black" target="_blank" href="https://www.instagram.com/uniquelynomad/"><span class="icon-instagram"></span></a>
+                            <a style="background-color:black" target="_blank" href="https://www.pinterest.com/uniquelynomad"><span class="icon-pinterest"></span></a>
+                            <a style="background-color:black" target="_blank" href="https://flic.kr/ps/3VmxdH"><span class="icon-flickr"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-top:80px">
+                    <div class="col-md-6 mb-5 mb-md-0">
+                        <img src="/img/DCS_0353.JPG" alt="Me" class="img-fluid">
+
+                    </div>
+                    <div class="col-md-5 ml-auto">
+                        <h2>About Brooke</h2>
+                        <p>
+                            My name is Brooke Simerson. I am from a small town on the coast of South Carolina. My hometown is so small that basically everybody knows everyone. I've only ever lived in one other place when I was going to college down in Georgia. I no longer live in Georgia, but I am planning on getting my bachelors and masters degree in Psychology with a Concentration of Mental Health through an online college. I grew a passion for learning about the mind, body, and soul when working at my job in Georgia. I would love to help guide others to finding peace within. Traveling has always been a true love of mine. I created Uproute Lifestyle to write blogs about my opinions/views on mental health awareness, van life/traveling, and everyday life scenarios.
+                        </p>
+                        <div class="social_29128 mt-5" style="">
+                            <a style="background-color:black" target="_blank" href="https://www.facebook.com/uproutelifestyle"><span class="icon-facebook"></span></a>
+                            <a style="background-color:black" target="_blank" href="https://www.instagram.com/uproutelifestyle/"><span class="icon-instagram"></span></a>
+                            <a style="background-color:black" target="_blank" href="https://www.pinterest.com/uproutelifestyle"><span class="icon-pinterest"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="flex-direction: row-reverse;padding-top:80px">
+                    <div class="col-md-6 mb-5 mb-md-0">
+                        <img src="/img/DCS_0346.JPG" alt="Me" class="img-fluid">
+
+                    </div>
+                    <div class="col-md-5 ml-auto">
+                        <h2>About Cleo</h2>
+                        <p>
+                            Cleo is our Labrador Retriever puppy. She is one year old and will turn two this April. She loves car rides, swimming, fetch, and playing with other dogs. Cleo is great with traveling, and has such a good time exploring new places. She took her first trip at 2 months old and has been traveling ever since. She has camped in tents, cars, our van and does great in all of them.
+                        </p>
+                        <div class="social_29128 mt-5" style="">
+                            <a style="background-color:black" target="_blank" href="https://www.instagram.com/_cleothelabrador_/"><span class="icon-instagram"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<!-- About the van section -->
+<div class="site-section bg-black about-me">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-5 mb-md-0">
+                <img src="/img/DCS_0003-2.jpg" alt="van" class="img-fluid">
+            </div>
+            <div class="col-md-5 ml-auto">
+                {{- partial "about-van.html" . -}}
+                <div style="margin-top:40px">
+                    <p><a href="/categories/econoline-van-build/" class="btn btn-primary btn-md text-white">Econoline Van Build</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="site-section bg-white">
+    <div class="container">
+        <div style="padding-bottom:40px">
+            <h2>Get In Touch</h2>
+            <p class="lead">
+                Email: <a href="mailto:uniquelynomad@gmail.com">uniquelynomad@gmail.com</a><br />
+                Instagram: <a target="_blank" href="https://www.instagram.com/uniquelynomad/">@uniquelynomad</a><br />
+                Pinterest: <a target="_blank" href="https://www.pinterest.com/uniquelynomad">@uniquelynomad</a>
+            </p>
+        </div>
+    </div>
+</div>
+{{ end }}

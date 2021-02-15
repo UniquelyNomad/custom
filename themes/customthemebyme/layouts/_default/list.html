@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div class="site-section" style="padding-top:160px">
+    <div class="container">
+        <div class="row mb-5 ">
+            <div class="col-md-7 text-center mx-auto">
+                <h2 class="serif">{{ .Title }}</h2>
+                <span class="subtitle-39293"><a href="/articles">All Articles</a> | <a href="/categories">All Categories</a></span>
+
+                <!--
+    <br />
+    <h3 style="text-transform:capitalize;">
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <a style="border:solid;padding:5px;font-size:12px" href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+        {{ end }}
+    </h3>
+        -->
+            </div>
+        </div>
+
+        {{- partial "listofpost.html" . -}}
+
+    </div>
+</div>
+{{ end }}
