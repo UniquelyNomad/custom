@@ -8,9 +8,12 @@ fields:
 - type: datetime
   name: date
   label: date
-- type: number
-  name: weight
-  label: weight
+- name: author
+  type: text
+  config:
+    required: false
+  label: Author
+  default: Eric Weaver
 - type: text
   name: summary
   label: summary
@@ -20,9 +23,6 @@ fields:
 - type: list
   name: categories
   label: categories
-- name: author
-  type: text
-  config:
-    required: false
-  label: Author
-  default: Eric Weaver
+- type: number
+  name: weight
+  label: weight
