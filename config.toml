@@ -1,0 +1,10 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "UniquelyNomad.com"
+theme = "customthemebyme"
+sectionPagesMenu = "mainmenu"
+paginate = 6
+
+[markup.goldmark.renderer]
+unsafe= true
+
