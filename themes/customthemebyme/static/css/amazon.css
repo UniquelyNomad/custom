@@ -1,0 +1,11 @@
+/* CSS Document */
+
+#outdoor-banner-desktop {display: block;}
+#outdoor-banner-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#outdoor-banner-desktop {display: none;}
+#outdoor-banner-mobile {display: block;}
+
+}
