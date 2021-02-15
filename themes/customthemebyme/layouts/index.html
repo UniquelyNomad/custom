@@ -1,0 +1,93 @@
+{{ define "main" }}
+<div class="ftco-blocks-cover-1">
+    <div class="site-section-cover overlay" style="background-image: url('/img/DCS_0746.JPG')">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p>Hey there! I'm Eric Weaver</p>
+                    <h1 class="mb-3 text-primary">Uniquely Nomad</h1>
+                    <p>{{ .Summary }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section bg-white">
+    <div class="container">
+
+        <div style="padding-bottom:40px;padding-top:40px">
+            {{.Content}}
+        </div>
+
+        <div class="row mb-5 ">
+            <div class="col-md-7">
+                <h2 class="serif">Newest Articles</h2>
+            </div>
+        </div>
+
+
+        {{ range ( where .Site.RegularPages.ByDate.Reverse "Type" "articles" | first 3 ) }}
+        <div class="blog_box">
+
+            <div class="post-entry-1 h-100" style="background-color:white">
+                <a href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.featured_image }}" alt="Image" class="blog_box_img">
+                </a>
+                <div class="halfwide">
+                    <div class="post-entry-1-contents">
+                        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                        <span class="meta d-inline-block mb-3">{{ .Date.Format "January 2, 2006" }} | {{ range .Params.categories }}<a class="" href="/categories/{{ . | urlize}}">{{ . }}.</a> {{ end }}</span>
+                        <p>{{ .Summary }}</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{end}}
+        <br />
+        <!-- More Button -->
+        <div style="margin-top:-40px">
+            <p><a href="/articles/" class="btn btn-primary btn-md text-white">All Articles</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="site-section bg-white" style="border-top:solid">
+    <div class="container">
+
+        <div class="row mb-5 ">
+            <div class="col-md-7">
+                <a href="/categories/econoline-van-build/"><h2 class="serif">Econoline Van Build</h2></a>
+                <p>The story and build process of my 1997 camper van.</p>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            {{ range ( where .Site.RegularPages "Type" "articles" | first 6 ) }}
+            {{ if in .Params.categories "Econoline Van Build" }}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="post-entry-1 h-100">
+                    <a href="{{ .RelPermalink }}">
+                        <img src="{{ .Params.featured_image }}" alt="Image" class="img-fluid">
+                    </a>
+                    <div class="post-entry-1-contents">
+                        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                        <p>{{ .Summary }}</p>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+        <br />
+        <div style="margin-top:-40px">
+            <p><a href="/categories/econoline-van-build/" class="btn btn-primary btn-md text-white">All Van Build Articles</a></p>
+        </div>
+    </div>
+</div>
+
+
+{{ end }}
