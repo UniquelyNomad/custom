@@ -20,3 +20,9 @@ fields:
 - type: list
   name: categories
   label: categories
+- name: author
+  type: text
+  config:
+    required: false
+  label: Author
+  default: Eric Weaver
