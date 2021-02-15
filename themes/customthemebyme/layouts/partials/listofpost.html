@@ -1,0 +1,22 @@
+<!-- Start of post -->
+<div class="row">
+    {{ range .Paginator.Pages.ByDate.Reverse }}
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="post-entry-1 h-100">
+            <a href="{{ .RelPermalink }}">
+                <img src="{{ .Params.featured_image }}" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <span class="meta d-inline-block mb-3">{{ .Date.Format "January 2, 2006" }}</span>
+                <p>{{ .Summary }}</p>
+                <p>{{ range .Params.categories }}<a style="border:solid;padding:6px;font-size:12px" class="" href="/categories/{{ . | urlize}}">{{ . }}</a> {{ end }}</p>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+<!-- Page Numbers (Change amount per page in config) -->
+<div style="display:flex;justify-content:center">
+    {{ template "_internal/pagination.html" . }}
+</div>
